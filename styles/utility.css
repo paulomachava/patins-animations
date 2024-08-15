@@ -10,6 +10,10 @@
     display: none;
 }
 
+
+.grid{
+    display: grid;
+}
 .flex{
     display: flex;
     }
