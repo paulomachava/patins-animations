@@ -1,0 +1,21 @@
+.py-md{
+    padding-block: var(--py-md);
+}
+
+.px-md{
+    padding-inline:var(--px-md) ;
+}
+
+.desktop-only{
+    display: none;
+}
+
+.flex{
+    display: flex;
+    }
+.items-center{
+        align-items: center;
+    }
+.space-between{
+    justify-content: space-between;
+}
