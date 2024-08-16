@@ -34,6 +34,50 @@
         font-size: 2rem;
         
     }
+
+    & .buttons{
+
+        flex-direction: column-reverse;
+        
+
+           
+        margin-top: 3rem;
+        & a{
+            transition: transform 350ms;
+             &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        & .play{
+        
+            & span{
+                display: flex;
+                align-items: center;
+                justify-items: center;
+                padding: 1.5rem;
+                border-radius: 5rem;
+                background: #FFF;
+                box-shadow: 0px 57px 16px 0px rgba(0, 0, 0, 0.00), 0px 36px 15px 0px rgba(0, 0, 0, 0.01), 0px 20px 12px 0px rgba(0, 0, 0, 0.05), 0px 9px 9px 0px rgba(0, 0, 0, 0.09), 0px 2px 5px 0px rgba(0, 0, 0, 0.10);  
+               }
+
+
+          
+        }
+        & .buy{
+           margin-top: 1.5rem;
+           text-transform: uppercase;
+           font-weight: 500;
+           width: fit-content;
+           padding: 1.5rem 3rem;
+           border-radius:5rem;
+           background: var(--snitap-sun);
+           box-shadow: 0px 57px 16px 0px rgba(0, 0, 0, 0.00), 0px 36px 15px 0px rgba(0, 0, 0, 0.01), 0px 20px 12px 0px rgba(0, 0, 0, 0.05), 0px 9px 9px 0px rgba(0, 0, 0, 0.09), 0px 2px 5px 0px rgba(0, 0, 0, 0.10);
+           
+          
+           
+        }
+    }
   }
 
   @keyframes slideUp {
@@ -121,8 +165,17 @@
             vertical-align: bottom;
             
         }
+
+        & .buttons{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+        
+        }
     }
 
+  
     @keyframes slideUp {
         0%,22%{
             transform: translateY(0);
