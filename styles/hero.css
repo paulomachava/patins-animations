@@ -1,6 +1,6 @@
 
   section#hero{
- 
+
     padding-block: 2.5rem;
    
     & h1{
@@ -148,6 +148,8 @@
         align-items: center;
          justify-content: space-between;
         overflow: hidden;
+        padding-left: 2rem;
+        padding-right: 0;
        
         
         & img[src*="hero"]{
