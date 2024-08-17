@@ -72,7 +72,19 @@
   .gallery {
     max-width: 80em;
     margin-inline: auto;
-
+    & header{
+        & span{
+            font-size: 0.875rem;
+            font-weight: 500;
+            font-family:var(--ff-montserrat);
+            line-height: 1.5;
+        }
+        & h2{
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+    }
     & div {
       display: grid;
       grid-template-areas:
