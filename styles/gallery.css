@@ -1,0 +1,119 @@
+.gallery {
+  & header {
+    text-align: center;
+  }
+
+  & header span {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  & header h2 {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  & > div {
+    display: grid;
+    grid-row: auto;
+    gap: 1rem;
+  }
+  & figure {
+    display: grid;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2.5rem;
+    line-height: 0;
+    & figcaption {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      font: 500 var(--text-sm)/1.5 var( --ff-montserrat);
+      position: absolute;
+      transform: translateY(100%);
+      transition: transform 500ms;
+      color: #fff;
+      bottom: 0;
+      width: 100%;
+      padding: 1.5rem 2rem;
+      background: linear-gradient(to top, rgb(0 0 0 / 0.64), rgb(0 0 0 / 0));
+    }
+    & figcaption img {
+      width: 2rem;
+    }
+
+    & > img {
+      width: 100%;
+      height: 16rem;
+    
+      & > img {
+        height: 25rem;
+        object-fit: cover;
+        transition: transform 500ms;
+      }
+    }
+    &:hover {
+      & > img {
+        transform: scale(1.05);
+      }
+      & figcaption{
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+@media (width >= 80em) {
+  .gallery {
+    max-width: 80em;
+    margin-inline: auto;
+
+    & div {
+      display: grid;
+      grid-template-areas:
+        "A B B"
+        "C C D";
+      gap: 2rem;
+
+      & figure{
+        animation: image-appear linear backwards;
+        animation-timeline: view();
+        animation-range: 100px 300px;
+
+        &[data-delay]{
+            animation-range: 150px 350px;
+        }
+        & > img {
+          height: 25rem;
+          object-fit: cover;
+        }
+
+        &:first-child {
+          grid-area: A;
+        }
+
+        &:nth-child(2) {
+          grid-area: B;
+        }
+
+        &:nth-child(3) {
+          grid-area: C;
+        }
+        &:nth-child(4) {
+          grid-area: D;
+        }
+      }
+    }
+  }
+
+
+}
+@keyframes image-appear{
+    from{
+   opacity: 0;
+   transform: translateY(100%);
+  }
+}
