@@ -1,7 +1,6 @@
 
   section#hero{
-    max-width: 80rem;
-    width: 100%;
+ 
     padding-block: 2.5rem;
    
     & h1{
